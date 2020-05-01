@@ -61,12 +61,12 @@ textarea{
   padding-top:  30px;
 }
 
-.present {
+#present {
   background-color: #ff6961;
   color: white;
 }
 
-.future {
+#future {
   background-color: #77dd77;
   color: white;
 }
