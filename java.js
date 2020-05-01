@@ -14,8 +14,14 @@
     $("#backTwo").text(moment().subtract(2, 'hour').format("ha"))
     $("#backThree").text(moment().subtract(3, 'hour').format("ha"))
 
+var currentHour = moment().format("h")
+    function colors(){ 
         
-  
+
+    };
+
+        
+  console.log(currentHour)
 
     
 
