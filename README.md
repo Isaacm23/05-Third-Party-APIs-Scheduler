@@ -1,9 +1,5 @@
 
   
-<<<<<<< HEAD
-=======
-  
->>>>>>> 0358cf4590ba7e9f6f32327a06f0cb71be0be827
 # 05 -web-apis-homework-demo
 
 ## Description
@@ -25,11 +21,7 @@ WHEN I refresh the page
 THEN the saved events persist
 
 ### Visuals
-<<<<<<< HEAD
 ![](./assets/gifApi.gif)
-=======
-![](codequiz.gif)
->>>>>>> 0358cf4590ba7e9f6f32327a06f0cb71be0be827
 
 
 ### Usage

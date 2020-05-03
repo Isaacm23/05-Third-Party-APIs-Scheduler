@@ -18,19 +18,19 @@ $("#backThree").text(moment().subtract(3, "hour").format("ha"));
 $(".saveBtn").on("click", function(){
     event.preventDefault();
     var click = $(this).attr("id");
-    var eventInput = $(click).val();
+    var eventInput = $("textarea").val();
     localStorage.setItem(click, eventInput);
     
-console.log(click)
 
+})
 // load from local storage on page load
 
 let timeBlock = ["#t1","#t2","#t3","#t4","#t5","#t6","#t7","t8","#t9"]
-
+let timeBlock =[ "#b1","#b2","#b3","#b4","#b5","#b6","#b7","#b8","#b9"]
 for (let i = 0; i < timeBlock.length; i++) {
     let savedEvent = $('textarea')
-    console.log(savedEvent)
+    
            
-    $(timeBlock[i]).val(localStorage.getItem(timeBlock[i]));
-    console.log(timeBlock[i])
-}});
+   $(timeBlock[i]).val(localStorage.getItem(timeBlock[i]));
+    
+}})
