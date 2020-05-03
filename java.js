@@ -26,7 +26,7 @@ $(".saveBtn").on("click", function(){
 // load from local storage on page load
 
 let timeBlock = ["#t1","#t2","#t3","#t4","#t5","#t6","#t7","t8","#t9"]
-let timeBlock =[ "#b1","#b2","#b3","#b4","#b5","#b6","#b7","#b8","#b9"]
+
 for (let i = 0; i < timeBlock.length; i++) {
     let savedEvent = $('textarea')
     
