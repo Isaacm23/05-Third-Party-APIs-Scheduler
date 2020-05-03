@@ -1,22 +1,4 @@
 
-$(".saveBtn").on("click", function () {
-    console.log("button duh");
-    var click = $(this).attr("data-value");
-    var eventInput = $(click).val();
-    localStorage.setItem(click, eventInput);
-});
-
-// load from local storage on page load
-
-
-let timeBlock = ["#t1","#t2","#t3","#t4","#t5","#t6","#t7","#t8","#t9"]
-
-for (let i = 0; i < timeBlock.length; i++) {
-    let savedEvent = $('.saved-event')
-           
-    $(timeBlock[i]).val(localStorage.getItem(timeBlock[i]));
-};
-
 
 $("#currentDay").text(moment().format("dddd, MMMM Do"));
 $("#currentTime").text(moment().format("ha"));
@@ -32,3 +14,23 @@ $("#backThree").text(moment().subtract(3, "hour").format("ha"));
 
 
 
+
+$(".saveBtn").on("click", function(){
+    event.preventDefault();
+    var click = $(this).attr("id");
+    var eventInput = $(click).val();
+    localStorage.setItem(click, eventInput);
+    
+console.log(click)
+
+// load from local storage on page load
+
+let timeBlock = ["#t1","#t2","#t3","#t4","#t5","#t6","#t7","t8","#t9"]
+
+for (let i = 0; i < timeBlock.length; i++) {
+    let savedEvent = $('textarea')
+    console.log(savedEvent)
+           
+    $(timeBlock[i]).val(localStorage.getItem(timeBlock[i]));
+    console.log(timeBlock[i])
+}});
