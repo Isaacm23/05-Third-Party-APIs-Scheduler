@@ -1,5 +1,7 @@
+function onload();
 
-
+  
+  
 $("#currentDay").text(moment().format("dddd, MMMM Do"));
 $("#currentTime").text(moment().format("ha"));
 $("#fw1").text(moment().add(1, "hour").format("ha"));
@@ -13,24 +15,23 @@ $("#backThree").text(moment().subtract(3, "hour").format("ha"));
 
 
 
-
-
-$(".saveBtn").on("click", function(){
-    event.preventDefault();
-    var click = $(this).attr("id");
-    var eventInput = $("textarea").val();
-    localStorage.setItem(click, eventInput);
+// heres what I have so far
+$(".saveBtn").click(function() {
+    value = $(this).siblings("textarea").val();
+    hourString = $(this).siblings("div").text();
     
+    localStorage.setItem(hourString, JSON.stringify(value));
+})
+    function onload(){
+    var timeBlock = ["#currentTime","#fw1","#fw2","#fw3","#fw4","#fw5","#backOne","#backTwo","#backthree"]
 
-
-// load from local storage on page load
-
-let timeBlock = ["#t1","#t2","#t3","#t4","#t5","#t6","#t7","t8","#t9"]
-
-for (let i = 0; i < timeBlock.length; i++) {
-    let savedEvent = $('textarea')
+    for (var i = 0; i < timeBlock.length; i++) {
+        var savedEvent = $('hour')
+        
+               
+       $(timeBlock[i]).val(localStorage.getItem(JSON.stringify(timeBlock[i])));
+        
+    }};
     
-           
-   $(timeBlock[i]).val(localStorage.getItem(timeBlock[i]));
     
-}})
+   
